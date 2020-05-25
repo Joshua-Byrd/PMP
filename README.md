@@ -4,6 +4,7 @@ PMP is a simple calculator for pool operators.  It prompts the user for the resu
 
 *Known Bugs*
 5/25/20
+
 The print_table function is not displaying the table properly
 
 
