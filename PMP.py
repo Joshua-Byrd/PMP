@@ -6,6 +6,8 @@ change, then calculates the necessary chemicals to enact change
 from pyfiglet import figlet_format
 from datetime import date
 from prettytable import PrettyTable
+import csv
+
 
 # daily_tests stores  the chemical readings for that day to be passed to other functions
 daily_tests = {}
@@ -34,8 +36,15 @@ def get_test_results():
         input("Finally, what was your cyanuric acid reading today?"))
 
 
-def export_test_results(tests):
-    print("This feature has not been implemented yet.")
+def export_test_results():
+    fields = ["Total Chlorine", "Free Chlorine", "Combined Chlorine", "Total Alkalinity", "Calcium Hardness",
+        "pH", "Temperature", "Stabilizer"]
+    print("\n\nCreating CSV file...\n\n")
+    with open ("test_results.csv", 'a') as results_file:
+        writer = csv.DictWriter(results_file, fieldnames = fields)
+        writer.writeheader(fields)
+        writer.writerow(daily_tests)
+    print("Finished.")
 
 
 def increase_chlorine(factor):
@@ -331,7 +340,7 @@ def menu():
             int(user_input)
             # checks user input and calls the correct function
             if user_input == "1":
-                export_test_results(daily_tests)
+                export_test_results()
             elif user_input == "2":
                 increase_chlorine(pool_factor)
             elif user_input == "3":
@@ -349,9 +358,7 @@ def menu():
             elif user_input == "9":
                 print_table()
             elif user_input == "10":
-                export_test_results()
-            elif user_input == "11":
-                print("\n\nThank you for using the Pool Maintenance Program!")
+                print("\n\n****Thank you for using the Pool Maintenance Program!****")
                 break
             else:
                 print(
