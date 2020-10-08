@@ -35,13 +35,13 @@ def get_test_results():
 
 
 def export_test_results(tests):
-    pass
+    print("This feature has not been implemented yet.")
 
 
 def increase_chlorine(factor):
     """
     increase_chlorine prompts the user for the desired change
-    in chlorine, then calculates and prints the ncessary chemical application
+    in chlorine then calculates and prints the ncessary chemical application
     """
     change = 0
     amount_to_add = 0
@@ -324,7 +324,8 @@ def menu():
               "7. Increase Stabilizer\n"
               "8. Calculate Saturation Index\n"
               "9. Print Water Chemistry Guidelines\n"
-              "10. Exit")
+              "10. Export test results to a CSV file\n"
+              "11. Exit")
         user_input = input("Please make a selection from the menu.  ")
         try:
             int(user_input)
@@ -348,6 +349,8 @@ def menu():
             elif user_input == "9":
                 print_table()
             elif user_input == "10":
+                export_test_results()
+            elif user_input == "11":
                 print("\n\nThank you for using the Pool Maintenance Program!")
                 break
             else:
