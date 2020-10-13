@@ -333,14 +333,13 @@ def menu():
               "7. Increase Stabilizer\n"
               "8. Calculate Saturation Index\n"
               "9. Print Water Chemistry Guidelines\n"
-              "10. Export test results to a CSV file\n"
-              "11. Exit")
+              "10.Exit")
         user_input = input("Please make a selection from the menu.  ")
         try:
             int(user_input)
             # checks user input and calls the correct function
             if user_input == "1":
-                export_test_results()
+                export_test_results(daily_tests)
             elif user_input == "2":
                 increase_chlorine(pool_factor)
             elif user_input == "3":
