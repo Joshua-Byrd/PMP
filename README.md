@@ -1,10 +1,9 @@
 # PMP
 
-PMP is a simple calculator for pool operators. It prompts the user for the results of their daily test results, then caculates the amount and type of chemicals to add to effect the desired change in chemistry. 
-This is my first from-scratch-no-tutorial-stright-from-my-own-melon program, and I'm probably not going to spend a lot more time on it, but there are a few things I'd like to do just for the learning experience. There are some bugs listed below, but it is functional at this point. 
+PMP is a simple calculator for pool operators. It prompts the user for the results of their daily test results, then caculates the amount and type of chemicals to add to effect the desired change in chemistry. While there are some bugs listed below, it is functional at this point. 
 
 ## To Run
-Navigate to the directory containing PMP and type:
+This is a small CLI program, and no installation is necessary. Simply navigate to the directory containing PMP in your chosen terminal and type:
 
 ```
 $ python PMP.py
